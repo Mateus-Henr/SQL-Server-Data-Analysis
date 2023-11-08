@@ -28,16 +28,9 @@ CREATE TABLE dim_carro (
     data_compra DATE
 );
 
-CREATE TABLE dim_sinistro (
-    id_sinistro INT PRIMARY KEY,
-    data_sinistro DATE,
-    valor DOUBLE
-);
-
 CREATE TABLE fato_sinistro (
     id_sinistro INT,
     cliente_id_cliente INT,
-    seguro_id_seguro INT,
     carro_id_carro INT,
     modelo_id_modelo INT,
     montadora_id_montadora INT,
@@ -45,7 +38,6 @@ CREATE TABLE fato_sinistro (
     valor DOUBLE,
     PRIMARY KEY (id_sinistro),
     FOREIGN KEY (cliente_id_cliente) REFERENCES dim_cliente(id_cliente),
-    FOREIGN KEY (seguro_id_seguro) REFERENCES dim_seguro(id_seguro),
     FOREIGN KEY (carro_id_carro) REFERENCES dim_carro(id_carro),
     FOREIGN KEY (modelo_id_modelo) REFERENCES dim_modelo(id_modelo),
     FOREIGN KEY (montadora_id_montadora) REFERENCES dim_montadora(id_montadora)
