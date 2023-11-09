@@ -1,0 +1,229 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="260a0fa9-ef50-4e26-9f04-4c5aabf07a6f" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Gradi</ID>
+  <Name>Gradi</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>Gradi</DataSourceID>
+  <Schema>
+    <xs:schema id="Gradi" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="Gradi" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="66eb90a7-a800-4b59-966e-30cf69a6949e">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="star_dim_carro" msprop:design-time-name="260660d5-3251-4293-b795-c044d8fd606e" msprop:DbTableName="dim_carro" msprop:FriendlyName="dim_carro" msprop:DbSchemaName="star" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id_carro" msprop:design-time-name="4135019a-32e4-46bc-804e-a5a5780a34ca" msprop:DbColumnName="id_carro" msprop:FriendlyName="id_carro" type="xs:int" />
+                  <xs:element name="cor" msprop:design-time-name="9c80c334-a5c2-4e4e-833d-abb22aa03db5" msprop:DbColumnName="cor" msprop:FriendlyName="cor" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="45" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="valor_compra" msprop:design-time-name="a6b805c4-238c-4edc-926a-41ad60af58bd" msprop:DbColumnName="valor_compra" msprop:FriendlyName="valor_compra" type="xs:double" minOccurs="0" />
+                  <xs:element name="data_compra" msprop:design-time-name="26a1c544-64e2-462e-b70a-2b8c970bf18c" msprop:DbColumnName="data_compra" msprop:FriendlyName="data_compra" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="star_dim_cliente" msprop:design-time-name="3327c173-6707-409f-94cb-60e4fba082c6" msprop:DbTableName="dim_cliente" msprop:FriendlyName="dim_cliente" msprop:DbSchemaName="star" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id_cliente" msprop:design-time-name="ccf56e69-f5c4-4f7d-aaf4-94529c951899" msprop:DbColumnName="id_cliente" msprop:FriendlyName="id_cliente" type="xs:int" />
+                  <xs:element name="regiao" msprop:design-time-name="058f8a93-e4b6-46d3-a5cc-2796c695e14e" msprop:DbColumnName="regiao" msprop:FriendlyName="regiao" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="45" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="estado" msprop:design-time-name="19891ebd-8d77-493b-8650-de999b14c2a6" msprop:DbColumnName="estado" msprop:FriendlyName="estado" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="45" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="cidade" msprop:design-time-name="00dd03ce-4207-4af5-87f5-901728c7da34" msprop:DbColumnName="cidade" msprop:FriendlyName="cidade" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="45" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="telefone" msprop:design-time-name="25e3d400-be35-4057-a4be-79a5bc2f8944" msprop:DbColumnName="telefone" msprop:FriendlyName="telefone" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="45" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="celular" msprop:design-time-name="6b076d58-fec3-46a0-87f9-93c349341085" msprop:DbColumnName="celular" msprop:FriendlyName="celular" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="45" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="sexo" msprop:design-time-name="58878e8c-5617-4726-870a-90d4118cb127" msprop:DbColumnName="sexo" msprop:FriendlyName="sexo" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="cep" msprop:design-time-name="efcb8fbd-8d7b-4d75-b567-a1efa47e2298" msprop:DbColumnName="cep" msprop:FriendlyName="cep" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="9" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="data_nasc" msprop:design-time-name="537c0116-c021-4587-82c2-d4cfd7a41f4b" msprop:DbColumnName="data_nasc" msprop:FriendlyName="data_nasc" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="star_dim_modelo" msprop:design-time-name="1422d4b5-1437-48ef-9962-fa0ca47eb01b" msprop:DbTableName="dim_modelo" msprop:FriendlyName="dim_modelo" msprop:DbSchemaName="star" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id_modelo" msprop:design-time-name="4623a609-5282-45cc-99ef-46ad33c6c663" msprop:DbColumnName="id_modelo" msprop:FriendlyName="id_modelo" type="xs:int" />
+                  <xs:element name="nome" msprop:design-time-name="2cd9753b-3652-4740-8ed2-b5c700e6b5c7" msprop:DbColumnName="nome" msprop:FriendlyName="nome" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="45" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="star_dim_montadora" msprop:design-time-name="1cb477ce-e637-42b0-9bf0-7cefe9814692" msprop:DbTableName="dim_montadora" msprop:FriendlyName="dim_montadora" msprop:DbSchemaName="star" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id_montadora" msprop:design-time-name="5014f678-3fa7-46bf-a6d7-0d939ed7b556" msprop:DbColumnName="id_montadora" msprop:FriendlyName="id_montadora" type="xs:int" />
+                  <xs:element name="nome" msprop:design-time-name="54170618-1224-45f0-8c79-fb6783120683" msprop:DbColumnName="nome" msprop:FriendlyName="nome" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="45" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="pais_origem" msprop:design-time-name="52968af5-72ba-41fb-8920-0beaecfd21e2" msprop:DbColumnName="pais_origem" msprop:FriendlyName="pais_origem" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="45" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="star_fato_sinistro" msprop:design-time-name="90c1b31f-3422-4fec-b7d7-96a8218e6a87" msprop:DbTableName="fato_sinistro" msprop:FriendlyName="fato_sinistro" msprop:DbSchemaName="star" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id_sinistro" msprop:design-time-name="dabc054b-3e47-4028-a39d-3f1301d42ed6" msprop:DbColumnName="id_sinistro" msprop:FriendlyName="id_sinistro" type="xs:int" />
+                  <xs:element name="cliente_id_cliente" msprop:design-time-name="f0180d5f-f49b-48ac-bd2d-f08b96b5a78f" msprop:DbColumnName="cliente_id_cliente" msprop:FriendlyName="cliente_id_cliente" type="xs:int" minOccurs="0" />
+                  <xs:element name="carro_id_carro" msprop:design-time-name="7d176719-6e98-46a7-b62f-ae8184f065c2" msprop:DbColumnName="carro_id_carro" msprop:FriendlyName="carro_id_carro" type="xs:int" minOccurs="0" />
+                  <xs:element name="modelo_id_modelo" msprop:design-time-name="4318dcb6-894c-4e16-8c1c-8fa283eaa3c4" msprop:DbColumnName="modelo_id_modelo" msprop:FriendlyName="modelo_id_modelo" type="xs:int" minOccurs="0" />
+                  <xs:element name="montadora_id_montadora" msprop:design-time-name="13b85d8e-fe5a-43ff-b3b0-6fac2ba24311" msprop:DbColumnName="montadora_id_montadora" msprop:FriendlyName="montadora_id_montadora" type="xs:int" minOccurs="0" />
+                  <xs:element name="data_sinistro" msprop:design-time-name="1e9f0024-d64e-492d-bf9f-5a57562ad5f8" msprop:DbColumnName="data_sinistro" msprop:FriendlyName="data_sinistro" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="valor" msprop:design-time-name="74beba4e-db1d-4a0b-929e-38adf9c60c22" msprop:DbColumnName="valor" msprop:FriendlyName="valor" type="xs:double" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//star_dim_carro" />
+          <xs:field xpath="id_carro" />
+        </xs:unique>
+        <xs:unique name="star_dim_cliente_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//star_dim_cliente" />
+          <xs:field xpath="id_cliente" />
+        </xs:unique>
+        <xs:unique name="star_dim_modelo_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//star_dim_modelo" />
+          <xs:field xpath="id_modelo" />
+        </xs:unique>
+        <xs:unique name="star_dim_montadora_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//star_dim_montadora" />
+          <xs:field xpath="id_montadora" />
+        </xs:unique>
+        <xs:unique name="star_fato_sinistro_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//star_fato_sinistro" />
+          <xs:field xpath="id_sinistro" />
+        </xs:unique>
+        <xs:keyref name="FK__fato_sini__model__0D7A0286" refer="star_dim_modelo_Constraint1">
+          <xs:selector xpath=".//star_fato_sinistro" />
+          <xs:field xpath="modelo_id_modelo" />
+        </xs:keyref>
+        <xs:keyref name="FK__fato_sini__clien__0B91BA14" refer="star_dim_cliente_Constraint1">
+          <xs:selector xpath=".//star_fato_sinistro" />
+          <xs:field xpath="cliente_id_cliente" />
+        </xs:keyref>
+        <xs:keyref name="FK__fato_sini__monta__0E6E26BF" refer="star_dim_montadora_Constraint1">
+          <xs:selector xpath=".//star_fato_sinistro" />
+          <xs:field xpath="montadora_id_montadora" />
+        </xs:keyref>
+        <xs:keyref name="FK__fato_sini__carro__0C85DE4D" refer="Constraint1">
+          <xs:selector xpath=".//star_fato_sinistro" />
+          <xs:field xpath="carro_id_carro" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <Gradi xmlns="" />
+  </Schema>
+</DataSourceView>

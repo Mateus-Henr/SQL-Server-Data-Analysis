@@ -1,0 +1,160 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="5f447441-281a-4c3e-93a9-e560d52d5329" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Fato Sinistro</ID>
+  <Name>Fato Sinistro</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="b6a0ca79-d993-4bcb-b1a7-75dd66c47f22">
+    <DataSourceViewID>Gradi</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="1d7b8c11-da5e-4108-84a6-c0d05cb28ec4">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="41a057c7-f30a-4c6a-8b54-c8b7c7dd7424">
+      <ID>Id Sinistro</ID>
+      <Name>Id Sinistro</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="36c1b4e3-b47a-4111-84e9-6ca1410f48d8">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b7f54da1-dfa0-4cd6-8a5e-da49e4469bb7">
+            <TableID>star_fato_sinistro</TableID>
+            <ColumnID>id_sinistro</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="31d91a28-2277-458e-8171-5286c82302ec">
+          <AttributeID>Carro Id Carro</AttributeID>
+          <Name>Carro Id Carro</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="9ef39129-a4e7-49f3-a162-99010f7aefe9">
+          <AttributeID>Montadora Id Montadora</AttributeID>
+          <Name>Montadora Id Montadora</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="cf8746b3-20e8-4c90-8aa7-b812d3d57852">
+          <AttributeID>Cliente Id Cliente</AttributeID>
+          <Name>Cliente Id Cliente</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="cda62ece-b11d-401a-895d-a92afc0450db">
+          <AttributeID>Modelo Id Modelo</AttributeID>
+          <Name>Modelo Id Modelo</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="4875ba08-8391-4171-909b-1b4cf72e13e1">
+      <ID>Carro Id Carro</ID>
+      <Name>Carro Id Carro</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9cbf098f-6424-4f42-8c1c-0b492f91147f">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b98bd776-513d-46e9-b97a-da4b07713379">
+            <TableID>star_fato_sinistro</TableID>
+            <ColumnID>carro_id_carro</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="609a9a86-8ae0-450a-b862-6a0dddd9ff5f">
+      <ID>Montadora Id Montadora</ID>
+      <Name>Montadora Id Montadora</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="63680547-51f5-4890-a955-4142fcdbd644">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9fadc2ff-3ddf-4f92-9380-74eaacbaa267">
+            <TableID>star_fato_sinistro</TableID>
+            <ColumnID>montadora_id_montadora</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="771742a5-2c81-4f48-9c0d-9a1d7ef9afb7">
+      <ID>Cliente Id Cliente</ID>
+      <Name>Cliente Id Cliente</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="78d0451f-e4d1-43c4-a761-4de2470055cb">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="903dfa70-18c0-4871-a372-72216dbc03b8">
+            <TableID>star_fato_sinistro</TableID>
+            <ColumnID>cliente_id_cliente</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e252f28e-0f48-48b7-b154-5281863a135f">
+      <ID>Modelo Id Modelo</ID>
+      <Name>Modelo Id Modelo</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a3054a1c-3c7d-454c-9e59-895e426ad047">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="18f35080-3e07-494e-a698-7d495b8623b6">
+            <TableID>star_fato_sinistro</TableID>
+            <ColumnID>modelo_id_modelo</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

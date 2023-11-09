@@ -1,0 +1,58 @@
+CREATE SCHEMA mydb;
+GO
+
+--- USE mydb;
+
+CREATE TABLE cliente (
+  id_cliente INT NOT NULL PRIMARY KEY,
+  regiao VARCHAR(45) NULL,
+  estado VARCHAR(45) NULL,
+  cidade VARCHAR(45) NULL,
+  telefone VARCHAR(45) NULL,
+  celular VARCHAR(45) NULL,
+  sexo CHAR(1) NULL,
+  cep CHAR(9) NULL,
+  data_nasc DATE NULL
+);
+GO
+
+CREATE TABLE montadora (
+  id_montadora INT NOT NULL PRIMARY KEY,
+  nome VARCHAR(45) NULL,
+  pais_origem VARCHAR(45) NULL
+);
+GO
+
+CREATE TABLE modelo (
+  id_modelo INT NOT NULL PRIMARY KEY,
+  nome VARCHAR(45) NULL,
+  montadora_id_montadora INT NOT NULL FOREIGN KEY REFERENCES montadora(id_montadora)
+);
+GO
+
+CREATE TABLE carro (
+  id_carro INT NOT NULL PRIMARY KEY,
+  cor VARCHAR(45) NULL,
+  valor_compra FLOAT NULL,
+  data_compra DATE NULL,
+  modelo_id_modelo INT NOT NULL FOREIGN KEY REFERENCES modelo(id_modelo),
+  cliente_id_cliente INT NOT NULL FOREIGN KEY REFERENCES cliente(id_cliente)
+);
+GO
+
+CREATE TABLE seguro (
+  id_seguro INT NOT NULL PRIMARY KEY,
+  valor_segurado FLOAT NULL,
+  premio FLOAT NULL,
+  ano_vigencia INT NULL,
+  carro_id_carro INT NOT NULL FOREIGN KEY REFERENCES carro(id_carro)
+);
+GO
+
+CREATE TABLE sinistro (
+  id_sinistro INT NOT NULL PRIMARY KEY,
+  data_sinistro DATE NULL,
+  valor FLOAT NULL,
+  carro_id_carro INT NOT NULL FOREIGN KEY REFERENCES carro(id_carro)
+);
+GO
